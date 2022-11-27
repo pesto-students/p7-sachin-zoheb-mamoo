@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  html{
+    background-color:#eee;
+  }
+  .container{
+    margin: 20px auto;
+    width:400px;
+    height:400px;
+    background-color:#fff;
+    display:grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    position: relative;
+    z-index: 0;
+
+}
+.content{
+    position: absolute;
+    text-align: center;
+    width: 400px;
+    top: 50%;
+    transform: translate(0 -50%);
+    z-index: -1;
+}
+.box1{
+      background-color:red;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:40px;
+      font-family:sans-serif;
+      transform-origin: top left  ;
+      transition: 1s ease-in-out;
+  }
+.box2{
+    background-color:green;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+    transform-origin: top right  ;
+    transition: 1s ease-in-out;
+}
+.box3{
+    background-color:blue;  
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+    transform-origin: bottom left  ;
+    transition: 1s ease-in-out;
+}
+.box4{
+    background-color:yellow;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+    transform-origin: bottom right  ;
+    transition: 1s ease-in-out;
+}
+
+.container:hover .box1{
+    transform: rotate(90deg);
+}
+.container:hover .box2{
+    transform: rotate(-90deg);
+}
+.container:hover .box3{
+    transform: rotate(-90deg);
+}
+.container:hover .box4{
+    transform: rotate(90deg);
+}

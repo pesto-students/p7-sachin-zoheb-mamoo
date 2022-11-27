@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Noticia+Text|Lalezar');
+
+:root{
+  --padding: 21px;
+  --bg-color: #f5f8eb;
+  --text-color: #0a643a;
+  --accent-color: #a0bb2e;
+  --font-family: 'Noticia Text';
+  --font-display: 'Lalezar';
+}
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: block;
+  padding: 2rem;
+  grid-template-columns: 300px 1fr;
+  gap: 5rem;
+  align-items: center;
+  font: 500 100%/1.5 system-ui;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--padding);
+  color: var(--text-color);
+  background: var(--bg-color);
+  font-family: var(--font-family);
+  line-height: 2;
+  font-size: 21px;
+}
+
+h2{
+  font-size: 180%;
+  transform: translateX(-5px);
+  font-family: var(--font-display);
+  margin-bottom: 0;
+}
+
+a{
+  color: var(--text-color);
+}
+
+p{
+  margin-right: 2em;
+}
+
+strong{
+  display: inline-block;
+  transform: translateX(-5px);
+  font-size: 130%;
+  line-height: 1;
+  font-family: var(--font-display);
+}
+
+strong:before{
+  margin-right: 5px;
+  margin-top: 34px; 
+  display: inline-block;
+}
+
+h2:after{
+  content: '';
+  display: block;
+  height: 8px;
+  background: var(--accent-color);
+  max-width: 55px;
+  transform: skewX(-21deg) translateY(-13px);
+  border-radius: 3px;
+}
+
+.row{
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+.column {
+  float: left;
+  width: 33.33%;
+}
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+form{
+  display: grid;
+}
+.submit:hover{
+  background-color: #0a643a;
+  color: #f5f8eb;
+}
+
+@media screen and (max-width: 980px) {
+    .row .column {
+      margin-bottom: 5px;
+      flex-basis: 40%;
+    }
+    .row .column:nth-last-child(2) {
+      margin-right: 0;
+    }
+    .row .column:last-child {
+      flex-basis: 100%;
+      margin: 0;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    .row .column {
+      flex-basis: 100%;
+      margin: 0 0 5px 0;
+    }
+  }
